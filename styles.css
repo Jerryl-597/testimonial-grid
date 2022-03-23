@@ -20,19 +20,20 @@ body {
   background-color: var(--clr-grey-2);
   min-height: 100vh;
   font-family: var(--ff-family);
-  display: grid;
+  width: 90vw;
+  margin: 0 auto;
 }
 .one {
   background-color: var(--clr-primary-1);
   margin-top: 3rem;
-
   position: relative;
   z-index: 1;
   /* height: 75vh; */
+  height: 30rem;
 }
 .section {
   width: 22.5rem;
-  height: auto;
+  /* height: auto; */
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1.5rem;
@@ -131,15 +132,19 @@ body {
 
 .two {
   background-color: var(--clr-primary-2);
+  height: 15rem;
 }
 .three {
   background-color: var(--clr-primary-4);
+  height: 15rem;
 }
 .four {
   background-color: var(--clr-primary-3);
+  height: 26rem;
 }
 .five {
   background-color: var(--clr-primary-4);
+  height: 33rem;
 }
 .attribution {
   font-size: 15px;
@@ -149,7 +154,7 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media screen and (min-width: 726px) {
+@media screen and (min-width: 1170px) {
   /* body {
     /* max-height: 100vh; 
   } */
@@ -162,13 +167,34 @@ body {
     padding: 2rem;
     border-radius: 0.5rem;
   }
+  /* .three,
+  .four {
+    margin-top: -1.5rem;
+  } */
+  .one,
+  .two,
+  .three,
+  .four {
+    height: auto;
+  }
+  .five {
+    height: auto;
+  }
+  .one,
+  .four {
+    width: 38rem;
+  }
+  .two,
+  .five,
+  .three {
+    width: 18rem;
+  }
   .grid {
     min-width: 30vw;
     display: grid;
-    max-width: 90vw;
+    max-width: 1170px;
     min-height: 100vh;
-    row-gap: 1.5rem;
-    column-gap: 1.5rem;
+    gap: 1.5rem;
     margin-top: 2rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -176,8 +202,8 @@ body {
       "a a b d"
       "c e e d";
   }
-  .section {
-    margin-top: 3rem;
+  .one {
+    margin-top: 0;
   }
   .one {
     grid-area: a;
